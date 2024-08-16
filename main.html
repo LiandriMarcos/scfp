@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>SCFP</title>
+
+        <style>
+
+:root {
+    --color1: #1a1e21;
+    --text-color: #171723;
+    --second-color: #00b0ff;
+}
+
+::selection {
+    color: #fff;
+    background: var(--second-color);
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 3rem 0 2rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px;
+
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.logo span {
+    color: var(--second-color);
+}
+
+.login {
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: var(--second-color);
+    color:var(--text-color);
+}
+
+.login:hover {
+    background: var(--bg-color);
+    color: var(--second-color);
+    transition: 0.3s;
+}
+
+.home {
+    width: 100%;
+    min-height: 1000px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(img/Blue\ Chalk\ Inspirational\ Quotes\ Desktop\ Wallpaper.png);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text {
+    color: #fff;
+    text-align: center;
+}
+
+.home-title {
+    font-size: 9rem;
+}
+
+.home-subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+header.shadow {
+    background: #fff;
+    transition: 0.7s;
+    box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+}
+
+header.shadow .login {
+    color: #fff;
+}
+
+header.shadow .login:hover {
+    color:#00b0ff;
+}
+
+header.shadow .logo {
+    color:var(--text-color);
+}
+
+footer {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction:column;
+        row-gap: 1rem;
+        padding: 20px 0;
+        text-align: center;
+}
+
+footer p.footer {
+    color:#fff;
+}
+
+footer p {
+    font-size: 1.1rem;
+    color:#2b2b2b;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.social .bx {
+    font-size: 1.6rem;
+    color:#172317;
+}
+
+.header {
+    width:100%;
+    height: 500;
+    background:#1a1e21;
+}
+
+.post-container {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.voltar {
+    color:var(--second-color);
+    font-size: 0.9rem;
+}
+
+.titulo-header {
+    width: 90%;
+    font-size: 2.6rem;
+    color:#fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.header-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+@media (max-width:998px) {
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction:column;
+        row-gap: 1rem;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .search-container {
+        opacity: 0;
+        position: absolute;
+    }
+
+    .post-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction:column;
+        row-gap: 1rem;
+        padding: 20px 20px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .perfil1 {
+        opacity: 0;
+        position: absolute;
+    }
+}
+
+.about {
+    color:#161617;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 5vw;
+}
+
+.col p {
+    font-size: 1.2rem;
+    color:#4d4d4d;
+    margin-bottom: 5vw;
+}
+
+.cadastroambiente {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(img/Blue\ Chalk\ Inspirational\ Quotes\ Desktop\ Wallpaper.png);
+}
+
+.cadastroambiente .cadastro {
+    color:#fff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 5vw;
+}
+
+.cadastroambiente p {
+    font-size: 1.2rem;
+    color:#fff;
+}
+
+.cadastroambiente img {
+    margin-top: 3vw;
+    margin-bottom: 4vw;
+}
+
+.cadastroambiente .login {
+    font-size: 1.5rem;
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+}
+
+.cadastroambiente {
+    align-items: center;
+    text-align: center;
+}
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="nav container">
+            <a href="main.html" class="logo">SC<span>FP</span></a>
+            <a href="signin.html" class="login">Entrar</a>
+            </div> <!--container-->
+        </header>
+        <section class="home" id="home">
+            <div class="home-text container">
+                <h2 class="home-title">SCFP</h2> <!--home-title-->
+                <span class="home-subtitle">Seu parceiro ideal para monitoramento em tempo real</span> <!--home-subtitle-->
+            </div> <!--home-text container-->
+        </section>
+
+        <div class="container">
+            <h2 class="about">Sobre o projeto</h2>
+            <br><br>
+            <div class="row">
+              <div class="col">
+                <p>O SCFP (Sistema de Contagem de Fluxo de Pessoas) foi desenvolvido para oferecer uma solução precisa e inovadora no monitoramento de fluxo de pessoas. Integrando tecnologia de ponta como visão computacional e análise em tempo real, o SCFP permite que você acompanhe o movimento de pessoas em seu espaço de forma eficiente e prática. Ideal para otimizar o controle de acesso, melhorar a segurança e tomar decisões estratégicas baseadas em dados confiáveis. Nossa missão é fornecer uma ferramenta robusta e fácil de usar, que atenda às necessidades de negócios de diferentes setores.</p>
+              </div>
+              <div class="col">
+                <img src="img/undraw_love_it_heart_dxlp.png" alt="" style="width: 20vw;">
+              </div>
+            </div>
+        </div>
+        <section class="cadastroambiente">
+        <div class="container">
+            <h2 class="cadastro">Cadastro de Ambiente</h2>
+            <br><br>
+            <div class="row">
+              <div class="col">
+                <img src="img/undraw_world_re_768g.svg" alt="" style="width: 20vw;">
+              </div>
+              <div class="col">
+                <p>Para começar a contar o fluxo de pessoas em seu ambiente, basta cadastrar o local logo abaixo para que seja possível identificá-lo. Inscreva seu espaço e aproveite nossa tecnologia avançada para obter dados precisos e otimizar a gestão do lugar.</p>
+                <a href="#" class="login">Cadastrar local</a>
+              </div>
+            </div>
+        </div>
+    </section>
+        <br><br>
+        <footer>
+            <p>&#169; Todos os Direitos Reservados por SCFP</p>
+            <div class="social">
+                <p class="social"><i class='bx bxl-instagram'></i></p>
+            </div> <!--social-->
+        </footer>
+        <br><br>
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+        <script src="./src/js/script.js"></script>
+    </body>
+</html>

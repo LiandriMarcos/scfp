@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem - SCFP</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .container-fluid {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .counter-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .counter-container h1 {
+            font-size: 6vw;
+            color: #414141;
+            margin-bottom: 30px;
+        }
+
+        .counter-value {
+            font-size: 15vw;
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+
+    <script>
+        function fetchContagem() {
+            fetch('/api/contagem')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Dados recebidos:', data);  // Adicione um log para ver os dados recebidos
+                    document.getElementById('cont').textContent = data.cont;
+                })
+                .catch(error => console.error('Erro ao buscar os dados:', error));
+        }
+
+        setInterval(fetchContagem, 100); // Atualiza a cada 1 segundo
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="counter-container">
+            <h1>Contagem:</h1>
+            <div class="counter-value"><span id="cont">0</span><span id="limite">/20</span></div> 
+        </div>
+    </div>
+
+</body>
+</html>
